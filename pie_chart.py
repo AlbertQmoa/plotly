@@ -1,6 +1,7 @@
 '''
     A basic pie chart will sum the vlaues according to the names respectively 
     and then show the percetage of each names.
+    reference: https://www.youtube.com/watch?v=_b2KXL0wHQg&list=PLh3I780jNsiTXlWYiNWjq2rBgg3UsL1Ub&index=1
 '''
 
 import pandas as pd
