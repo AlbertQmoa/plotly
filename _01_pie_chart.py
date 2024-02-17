@@ -7,6 +7,8 @@
 import pandas as pd
 import plotly.express as px
 
+
+# ====== Step 0: Prepare data ====== 
 df = pd.read_csv('data/bird-window-collision-death.csv')
 
 
@@ -17,11 +19,10 @@ fig = px.pie(df, values='Deaths', names='Bldg #', color='Side', hole=0.3)
 
 # ====== Step 2: use plotly.graph_objective to refine your figure ======
 # Traces represent the data (inside the layout)
-# Layout represents the chart (frames, title, color, tick, hover, legend)
+# Layout represents the figure (frames, title, color, tick, hover, legend)
 fig.update_traces(textinfo='label+percent', insidetextfont={'color':'white'})
 fig.update_layout(legend={'itemclick':False})
 
 # ====== Step 3: Show and save your figure ======
 fig.show()
-
 fig.write_image('images/pie.png')
