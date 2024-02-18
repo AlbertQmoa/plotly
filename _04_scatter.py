@@ -61,11 +61,11 @@ scatterplot = px.scatter(
                                     # 'xgridoff', 'ygridoff', 'gridon', 'none'
 
     # ------------ 動畫 ------------
-    animation_frame='tbl_size',     # 根據什麼數值來驅使動畫
+    animation_frame='tbl_size',     # 根據什麼欄位來區分動畫的分鏡圖
     #animation_group=,              # use only when df has multiple rows with same object
     range_x=[5,50],                 # 設定 x 軸範圍
     range_y=[0,10],                 # 設定 y 軸範圍
-    # category_orders={'tbl_size':[1,2,3,4,5,6]},   # set a specific ordering of values per column
+    category_orders={'tbl_size':[1,2,3,4,5,6]},   # 根據什麼欄位來決定動畫執行的順序。
 )
 
 
